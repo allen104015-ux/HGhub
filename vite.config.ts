@@ -10,8 +10,9 @@ const { version } = JSON.parse(
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // GitHub Pages hosts project sites under /<repository>/; local/Tauri builds keep root paths.
+  base: process.env.GITHUB_ACTIONS === "true" ? "/HGhub/" : "/",
   clearScreen: false,
-  // 版本号只维护 package.json（CI 会按 tag 改写它），界面里的版本由这里注入，避免写死后漂移
   define: {
     __APP_VERSION__: JSON.stringify(version),
   },
