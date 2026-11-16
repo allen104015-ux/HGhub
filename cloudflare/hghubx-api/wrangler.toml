@@ -1,0 +1,9 @@
+name = "hghubx-api"
+main = "src/index.js"
+compatibility_date = "2026-11-16"
+workers_dev = true
+
+[vars]
+# Set this to the exact deployed GitHub Pages origin before enabling browser calls.
+# Example: "https://allen104015-ux.github.io"
+ALLOWED_ORIGIN = ""
